@@ -1,0 +1,13 @@
+Hate    Ghét
+Hack    Trộm
+Hello    Xin Chào
+Hero    Anh Hùng
+Hell    Địa ngục
+Cave    Hang động
+Care    Quan tâm
+Pen    Bút mực
+Goodbye    Tạm biệt
+Love    Yêu
+
+
+

@@ -34,6 +34,19 @@ public class Word {
         this.wordExplain = wordExplain;
     }
 
+    /**
+     * Copy word
+     * @param w
+     */
+    public Word(Word w) {
+        this.wordTarget = w.getWordTarget();
+        this.wordExplain = w.getWordExplain();
+    }
+
+    public String getInfo() {
+        return "|" + this.getWordTarget() + "\t\t|" + this.getWordExplain();
+    }
+
     public String getWordTarget() {
         return wordTarget;
     }
