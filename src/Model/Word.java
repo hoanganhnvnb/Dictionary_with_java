@@ -2,6 +2,8 @@
  * Class Word co hai thuoc tinh la wordTarget va wordExplain
  * Mang cac doi tuong word duoc luu vao mang trong class Dictionary
  */
+package Model;
+
 public class Word {
     private String wordTarget;
     private String wordExplain;
