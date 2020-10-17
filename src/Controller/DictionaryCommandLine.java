@@ -1,6 +1,8 @@
 package Controller;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import Model.*;
 
 public class DictionaryCommandLine {
@@ -36,7 +38,6 @@ public class DictionaryCommandLine {
         if (index != -1) {
             System.out.println(Dictionary.words.get(index).getInfo());
         }
-        dictionarySearcher();
         DictionaryManagement.dictionaryExportToFile();
     }
 
@@ -45,10 +46,8 @@ public class DictionaryCommandLine {
      * Nhập 1 từ tiếng anh hoặc một phần của từ tiếng anh.
      * @return trả về list các từ bằng hoặc chứa từ đó...
      */
-    public static void dictionarySearcher() {
-        System.out.print("Enter the word you want to search: ");
-        String wordTargetFind = DictionaryManagement.sc.nextLine();
-        ArrayList<Word> wordFindArr = new ArrayList<Word>();
+    public static List<Word> dictionarySearcher(String wordTargetFind) {
+        List<Word> wordFindArr = new ArrayList<Word>();
         
         // add các từ tìm được phù hợp vào mảng mới.
         for (Word word : Dictionary.words) {
@@ -57,15 +56,12 @@ public class DictionaryCommandLine {
                 wordFindArr.add(wordFind);
             }
         }
+        return wordFindArr;
+    }
 
-        // nếu các mảng có 0 phần tử nghĩa là không tìm được gì.
-        if(wordFindArr.size() == 0) {
-            System.out.println("Word Not Found!!!!!!!");
-        } else {
-            for (Word word : wordFindArr) {
-                System.out.println(word.getInfo());
-            }
-        }
+    public static List<Word> searcher(String wordFind) {
+        List<Word> wordFindArr = new ArrayList<Word>();
+        return wordFindArr;
     }
 }
 

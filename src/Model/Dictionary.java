@@ -1,7 +1,8 @@
 package Model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Dictionary {
-    public static ArrayList<Word> words = new ArrayList<Word>();
+    public static List<Word> words = new ArrayList<Word>();
 }

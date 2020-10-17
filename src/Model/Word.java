@@ -46,7 +46,7 @@ public class Word {
     }
 
     public String getInfo() {
-        return "|" + this.getWordTarget() + "\t\t|" + this.getWordExplain();
+        return this.getWordTarget() + "\t\t" + this.getWordExplain();
     }
 
     public String getWordTarget() {

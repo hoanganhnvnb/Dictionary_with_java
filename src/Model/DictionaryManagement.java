@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 import java.io.*;
 
@@ -32,16 +34,16 @@ public class DictionaryManagement {
      */
     public static void insertFromFile() {
         try {
-            File file = new File("../data/dictionaries.txt");
+            File file = new File("./data/dictionaries.txt");
             FileReader fileReader = new FileReader(file);
             BufferedReader buffReader = new BufferedReader(fileReader);
             String line;
             String[] str = new String[2];
 
             while ((line = buffReader.readLine()) != null) {
-                str = line.split("    ");
-                Word word = new Word(str[0], str[1]);
-                Dictionary.words.add(word);
+                str[0] = line.substring(0, line.indexOf(":"));
+                str[1] = line.substring(line.indexOf(":") + 1);
+                Dictionary.words.add(new Word(str[0].trim(), str[1].trim()));
             }
             fileReader.close();
             buffReader.close();
@@ -55,10 +57,13 @@ public class DictionaryManagement {
      * Suất ra file dictionaries.txt.
      */
     public static void dictionaryExportToFile() {
+        Dictionary.words.sort((o1, o2) -> {
+            return o1.getWordTarget().toLowerCase().compareTo(o2.getWordTarget().toLowerCase());
+        });
         try {
             FileWriter file = new FileWriter("./data/dictionaries.txt");
             for(Word word : Dictionary.words) {
-                file.write((word.getWordTarget() + "    " + word.getWordExplain()));
+                file.write((word.getWordTarget() + ":\t" + word.getWordExplain()));
                 file.write("\n");
             }
             file.close();
@@ -73,54 +78,49 @@ public class DictionaryManagement {
      * Tim từ đã nhập vào theo commandline.
      */
     public static int dictionaryLookup(String wordTargetFind) {
-        for (Word word : Dictionary.words) {
-            if (wordTargetFind.toLowerCase().equals(word.getWordTarget().toLowerCase())) {
-               return Dictionary.words.indexOf(word);
+        Comparator<Word> cmp = new Comparator<Word>() {
+            @Override
+            public int compare(Word o1, Word o2) {
+                return o1.getWordTarget().toLowerCase().compareTo(o2.getWordTarget().toLowerCase());
             }
-        }
-        System.out.println("Not Found!");
-        return -1;
+        };
+
+        return Collections.binarySearch(Dictionary.words, new Word(wordTargetFind, ""), cmp);
     }
 
 
     /**
      * ADD Word.
      */
-    public static void addWord() {
-        System.out.print("Input word target want to add : ");
-        String wordTarget = sc.nextLine();
-        System.out.print("Input word explain want to add : ");
-        String wordExplain = sc.nextLine();
+    public static void addWord(String wordTarget, String wordExplain) {
         Dictionary.words.add(new Word(wordTarget, wordExplain));
+        Dictionary.words.sort((o1, o2) -> {
+            return o1.getWordTarget().toLowerCase().compareTo(o2.getWordTarget().toLowerCase());
+        });
+        dictionaryExportToFile();
     }
 
 
     /**
      * Remove Word.
      */
-    public static void removeWord() {
-        System.out.print("Input word target want to remove : ");
-        String wordTarget = sc.nextLine();
+    public static void removeWord(String wordTarget) {
         int index = dictionaryLookup(wordTarget);
-        if (index != -1) {
+        if (index > -1) {
             Dictionary.words.remove(Dictionary.words.get(index));
         }
+        dictionaryExportToFile();
     }
 
     /**
      * Fixed word.
      */
-    public static void fixWord() {
-        System.out.print("Input word want to fix : ");
-        String wordTargetFix = sc.nextLine();
-        int index = dictionaryLookup(wordTargetFix);
-        if (index != -1) {
-            System.out.print("Input word target: ");
-            String wordTarget = sc.nextLine();
-            System.out.print("Input word explain: ");
-            String wordExplain = sc.nextLine();
-            Dictionary.words.get(index).setWordTarget(wordTarget);
-            Dictionary.words.get(index).setWordExplain(wordExplain);
+    public static void editWord(String newTarget, String newExplain) {
+        int index = dictionaryLookup(newTarget);
+        if (index > -1) {
+            Dictionary.words.get(index).setWordTarget(newTarget);
+            Dictionary.words.get(index).setWordExplain(newExplain);
         }
+        dictionaryExportToFile();
     }
 }
