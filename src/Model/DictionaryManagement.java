@@ -26,6 +26,10 @@ public class DictionaryManagement {
             word = new Word(wordTarget, wordExplain);
             Dictionary.words.add(word);
         }
+
+        Dictionary.words.sort((o1, o2) -> {
+            return o1.getWordTarget().toLowerCase().compareTo(o2.getWordTarget().toLowerCase());
+        });
     }
 
 
@@ -50,6 +54,10 @@ public class DictionaryManagement {
         } catch (Exception exception) {
             System.out.println("Error: " + exception);
         }
+
+        Dictionary.words.sort((o1, o2) -> {
+            return o1.getWordTarget().toLowerCase().compareTo(o2.getWordTarget().toLowerCase());
+        });
     }
 
 
@@ -94,9 +102,6 @@ public class DictionaryManagement {
      */
     public static void addWord(String wordTarget, String wordExplain) {
         Dictionary.words.add(new Word(wordTarget, wordExplain));
-        Dictionary.words.sort((o1, o2) -> {
-            return o1.getWordTarget().toLowerCase().compareTo(o2.getWordTarget().toLowerCase());
-        });
         dictionaryExportToFile();
     }
 
@@ -104,23 +109,25 @@ public class DictionaryManagement {
     /**
      * Remove Word.
      */
-    public static void removeWord(String wordTarget) {
+    public static boolean removeWord(String wordTarget) {
         int index = dictionaryLookup(wordTarget);
         if (index > -1) {
             Dictionary.words.remove(Dictionary.words.get(index));
+            dictionaryExportToFile();
+            return true;
         }
-        dictionaryExportToFile();
+        return false;
     }
 
     /**
      * Fixed word.
      */
-    public static void editWord(String newTarget, String newExplain) {
-        int index = dictionaryLookup(newTarget);
+    public static void editWord(String oldTarget, String newTarget, String newExplain) {
+        int index = DictionaryManagement.dictionaryLookup(oldTarget);
         if (index > -1) {
             Dictionary.words.get(index).setWordTarget(newTarget);
             Dictionary.words.get(index).setWordExplain(newExplain);
+            dictionaryExportToFile();
         }
-        dictionaryExportToFile();
     }
 }

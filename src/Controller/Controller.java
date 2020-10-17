@@ -1,7 +1,6 @@
 package Controller;
 
 import Model.Dictionary;
-import Model.DictionaryManagement;
 import Model.Word;
 import View.DictionaryApplication;
 import javafx.collections.FXCollections;
@@ -18,14 +17,16 @@ import javax.speech.synthesis.SynthesizerModeDesc;
 import java.net.URL;
 import java.util.*;
 
+import static Model.DictionaryManagement.*;
+
 
 public class Controller implements Initializable {
-
-    DictionaryApplication dicApp = new DictionaryApplication();
 
     private List<Word> wordsFind = Dictionary.words;
 
     private String textSpeech = "";
+
+    private Word wordEdit;
 
     @FXML
     private TextField Search;
@@ -58,10 +59,14 @@ public class Controller implements Initializable {
         WordExplain.setEditable(false);
 
         // add listener cho thanh search
-        Search.textProperty().addListener((observable, oldValue, newValue) -> {
-            wordsFind = DictionaryCommandLine.dictionarySearcher(newValue.trim());
-            loadData();
-        });
+        try {
+            Search.textProperty().addListener((observable, oldValue, newValue) -> {
+                wordsFind = DictionaryCommandLine.dictionarySearcher(newValue.trim());
+                loadData();
+            });
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
         Speak.setOnMouseClicked(event -> {
             textToSpeech(textSpeech);
@@ -75,20 +80,31 @@ public class Controller implements Initializable {
                 editButton.setDisable(false);
                 String s = listWordExplain.get(listWordTarget.indexOf(newValue));
                 if (!newValue.equals("NOT FOUND!")) {
-                    textExplain[0] = s.substring(0, s.lastIndexOf(".") + 1);
-                    textExplain[1] = s.substring(s.indexOf("/"), s.lastIndexOf("/") + 1);
-                    textExplain[2] = s.substring(s.lastIndexOf("/") + 1);
+                    if (s.lastIndexOf(".") > -1) {
+                        textExplain[0] = s.substring(0, s.lastIndexOf(".") + 1);
+                    } else {
+                        textExplain[0] = "UNKNOWN";
+                    }
+                    if (s.indexOf("/") > - 1 && s.lastIndexOf("/") > -1) {
+                        textExplain[1] = s.substring(s.indexOf("/"), s.lastIndexOf("/") + 1);
+                        textExplain[2] = s.substring(s.lastIndexOf("/") + 1);
+                    } else {
+                        textExplain[1] = "/UNKNOWN/";
+                        textExplain[2] = s;
+                    }
                     WordExplain.setText(newValue + ":\n" + textExplain[1] + "\n"
                             + "( " + textExplain[0] + ") " + textExplain[2]);
                 } else {
                     WordExplain.setText(newValue);
                 }
                 textSpeech = newValue;
+                wordEdit = new Word(newValue, s);
 
             });
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+        loadData();
     }
 
     private void loadData() {
@@ -107,35 +123,54 @@ public class Controller implements Initializable {
     }
 
     public void clickEdit(ActionEvent event) {
-        dicApp.createDialogEdit();
-        Optional<Pair<String, String>> result = dicApp.dialogEdit.showAndWait();
+        DictionaryApplication.createDialogEdit(wordEdit);
+        Optional<Pair<String, String>> result = DictionaryApplication.dialogEdit.showAndWait();
 
         result.ifPresent(word -> {
-            DictionaryManagement.editWord(word.getKey(), word.getValue());
-            loadData();
+            editWord(wordEdit.getWordTarget(), word.getKey(), word.getValue());
         });
+        wordsFind = DictionaryCommandLine.dictionarySearcher(Search.getText().trim());
+        loadData();
     }
 
     public void clickAdd(ActionEvent event) {
-        dicApp.createDialogAdd();
-        Optional<Pair<String, String>> result = dicApp.dialogAdd.showAndWait();
+        DictionaryApplication.createDialogAdd();
+        Optional<Pair<String, String>> result = DictionaryApplication.dialogAdd.showAndWait();
 
-        result.ifPresent(word -> {
-            DictionaryManagement.addWord(word.getKey(), word.getValue());
-            loadData();
-        });
+        result.ifPresent(word -> addWord(word.getKey(), word.getValue()));
+        wordsFind = DictionaryCommandLine.dictionarySearcher(Search.getText().trim());
+        loadData();
     }
 
+    /**
+     * click vào remove sẽ gọi hàm tạo dialog.
+     * Sau khi nhập sữ liệu, nếu tìm tháy từ cần xóa thì sẽ xóa, còn không thì thông báo.
+     * @param event sự kiện
+     */
     public void clickRemove(ActionEvent event) {
-        dicApp.createDialogSub();
-        Optional<Pair<String, String>> result = dicApp.dialogSub.showAndWait();
+        DictionaryApplication.createDialogSub();
+        Optional<Pair<String, String>> result = DictionaryApplication.dialogSub.showAndWait();
 
         result.ifPresent(word -> {
-            DictionaryManagement.removeWord(word.getKey());
-            loadData();
+            boolean isRemove = removeWord(word.getKey());
+            if (!isRemove) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText("NOT FOUND WORD!!!");
+                alert.setContentText("Not found word");
+                alert.setTitle("Not Remove");
+                alert.show();
+            }
         });
+        wordsFind = DictionaryCommandLine.dictionarySearcher(Search.getText().trim());
+        loadData();
     }
 
+
+    /**
+     * Đầu vào là từ cần nói.
+     * @param text từ cần nói.
+     * @return 1. sau khi nói trả về 1 để tránh không thoát được luồng input...
+     */
     public static int textToSpeech(String text) {
         try {
             // Set property as Kevin Dictionary

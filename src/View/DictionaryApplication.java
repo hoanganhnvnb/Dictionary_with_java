@@ -2,6 +2,7 @@ package View;
 
 import Model.Dictionary;
 import Model.DictionaryManagement;
+import Model.Word;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -13,8 +14,6 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.util.Pair;
 
-import javax.xml.soap.Text;
-
 
 public class DictionaryApplication extends Application {
 
@@ -22,9 +21,9 @@ public class DictionaryApplication extends Application {
     public static Dialog<Pair<String, String>> dialogSub;
     public static Dialog<Pair<String, String>> dialogEdit;
 
-    private ButtonType buttonTypeYes = new ButtonType("Yes", ButtonBar.ButtonData.YES);
-    private ButtonType buttonTypeNo = new ButtonType("No", ButtonBar.ButtonData.NO);
-    private ButtonType buttonTypeCancel = new ButtonType("Cancel",ButtonBar.ButtonData.CANCEL_CLOSE);
+    private static ButtonType buttonTypeYes = new ButtonType("Yes", ButtonBar.ButtonData.YES);
+    private static ButtonType buttonTypeNo = new ButtonType("No", ButtonBar.ButtonData.NO);
+    private static ButtonType buttonTypeCancel = new ButtonType("Cancel",ButtonBar.ButtonData.CANCEL_CLOSE);
 
     public static void main(String[] args) {
         DictionaryManagement.insertFromFile();
@@ -37,7 +36,6 @@ public class DictionaryApplication extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("DictionaryApplication.fxml"));
             Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("./DictionaryApplication.css").toExternalForm());
             primaryStage.setTitle("Dictionary");
             primaryStage.setScene(scene);
             primaryStage.setOnCloseRequest(event -> {
@@ -49,7 +47,7 @@ public class DictionaryApplication extends Application {
         }
     }
 
-    public void createDialogAdd() {
+    public static void createDialogAdd() {
         dialogAdd = new Dialog<>();
         dialogAdd.setTitle("Adding Word");
         dialogAdd.setHeaderText("Add Word");
@@ -93,7 +91,7 @@ public class DictionaryApplication extends Application {
         });
     }
 
-    public void createDialogSub() {
+    public static void createDialogSub() {
         dialogSub = new Dialog<>();
         dialogSub.setTitle("Remove Word");
         dialogSub.setHeaderText("Remove Word");
@@ -129,7 +127,7 @@ public class DictionaryApplication extends Application {
         });
     }
 
-    public void createDialogEdit() {
+    public static void createDialogEdit(Word wordEdit) {
         dialogEdit = new Dialog<>();
         dialogEdit.setTitle("Edit Word");
         dialogEdit.setHeaderText("Edit Word");
@@ -140,42 +138,27 @@ public class DictionaryApplication extends Application {
         GridPane grid = new GridPane();
         grid.setHgap(10);
         grid.setVgap(10);
-        grid.setPadding(new Insets(20, 150, 10, 10));
+        grid.setPadding(new Insets(20, 10, 10, 10));
 
-        Button btnSearch = new Button("Search");
-        btnSearch.setDisable(true);
+        TextArea newWordTarget = new TextArea();
+        newWordTarget.setPrefSize(200, 60);
+        TextArea newWordExplain = new TextArea();
+        newWordExplain.setPrefSize(400, 60);
 
-        TextField newWordTarget = new TextField();
-        newWordTarget.setPromptText("Word Target Edit");
-        TextField newWordExplain = new TextField();
-        newWordExplain.setPromptText("Word Explain Edit");
+        newWordTarget.setText(wordEdit.getWordTarget());
+        newWordExplain.setText(wordEdit.getWordExplain());
 
-        grid.add(new Label("Word Target Edit:"), 0, 0);
+        grid.add(new Label("Edit Word Target:"), 0, 0);
+        grid.add(new Label("Edit Word Explain:"), 1, 0);
         grid.add(newWordTarget, 0, 1);
-        grid.add(btnSearch, 1, 1);
-        grid.add(new Label("Word Explain Edit:"), 0, 2);
-        grid.add(newWordExplain, 1, 2);
+        grid.add(newWordExplain, 1, 1);
 
-        dialogAdd.getDialogPane().setContent(grid);
+        dialogEdit.getDialogPane().setContent(grid);
 
-        Node buttonYes = dialogAdd.getDialogPane().lookupButton(buttonTypeYes);
-        buttonYes.setDisable(true);
+        Node buttonYes = dialogEdit.getDialogPane().lookupButton(buttonTypeYes);
 
-        newWordTarget.textProperty().addListener((observable, oldValue, newValue) -> {
-            buttonYes.setDisable(newValue.trim().isEmpty());
-        });
-
-        btnSearch.setOnAction(event -> {
-            int index = DictionaryManagement.dictionaryLookup(newWordTarget.getText());
-            if (index > -1) {
-                newWordExplain.setText(Dictionary.words.get(index).getWordExplain());
-            } else {
-                newWordExplain.setText("NOT FOUND!");
-            }
-        });
-
-        dialogAdd.setResultConverter(dialogButton -> {
-            if (dialogButton == buttonTypeYes && !newWordTarget.getText().equals("NOT FOUND!")) {
+        dialogEdit.setResultConverter(dialogButton -> {
+            if (dialogButton == buttonTypeYes) {
                 return new Pair<>(newWordTarget.getText(), newWordExplain.getText());
             }
             return null;
