@@ -1,6 +1,3 @@
-ability:	n. /ə'biliti/ khả năng, năng lực
-able:	adj. /'eibl/ có năng lực, có tài
-about:	adv., prep. /ə'baut/ khoảng, về
 above:	prep., adv. /ə'bʌv/ ở trên, lên trên
 abroad:	adv. /ə'brɔ:d/ ở, ra nước ngoài, ngoài trời
 absence:	n. /'æbsəns/ sự vắng mặt
@@ -31,8 +28,6 @@ acknowledge:	v. /ək'nɔlidʤ/ công nhận, thừa nhận
 acquire:	v. /ə'kwaiə/ dành được, đạt được, kiếm được
 across:	adv., prep. /ə'krɔs/ qua, ngang qua
 act:	n., v. /ækt/ hành động, hành vi, cử chỉ, đối xử
-action:	n. /'ækʃn/ hành động, hành vi, tác động
-action:	hành động
 active:	adj. /'æktiv/ tích cực hoạt động, nhanh nhẹn
 actively:	adv. /'æktivli/
 activity:	n. /æk'tiviti/
@@ -57,8 +52,6 @@ advanced:	adj. /əd'vɑ:nst/ tiên tiến, tiến bộ, cấp cao
 advantage:	n. /əb'vɑ:ntidʤ/ sự thuận lợi, lợi ích, lợi thế
 adventure:	n. /əd'ventʃə/ sự phiêu lưu, mạo hiểm
 advertise:	v. /'ædvətaiz/ báo cho biết, báo cho biết trước
-advertisement:	/əd'və:tismənt/ quảng cáo
-advertisement:	(also ad, advert) n. /əd'və:tismənt/
 advertising:	n.  sự quảng cáo, nghề quảng cáo
 advice:	n. /əd'vais/ lời khuyên, lời chỉ bảo
 advise:	v. /əd'vaiz/ khuyên, khuyên bảo, răn bảo
@@ -204,8 +197,6 @@ as:	prep., adv., conj. /æz, əz/ như (as you know…)
 as soon as:	ngay khi
 as well (as):	cũng, cũng như
 ashamed:	adj. /ə'ʃeimd/ ngượng, xấu hổ
-aside:	adv. /ə'said/ về một bên, sang một bên
-aside:	from ngoài ra, trừ ra
 ask:	v. /ɑ:sk/ hỏi
 asleep:	adj. /ə'sli:p/ ngủ, đang ngủ
 aspect:	n. /'æspekt/ vẻ bề ngoài, diện mạo
@@ -293,8 +284,6 @@ beat:	n., v. /bi:t/ tiếng đập, sự đập; đánh đập, đấm
 beautiful:	adj. /'bju:təful/ đẹp
 beautifully:	adv. /'bju:təfuli/ tốt đẹp, đáng hài lòng
 beauty:	n. /'bju:ti/ vẻ đẹp, cái đẹp; người đẹp
-because:	conj. /bi'kɔz/ bởi vì, vì
-because:	of prep. vì, do bởi
 become:	v. /bi'kʌm/ trở thành, trở nên
 bed:	n. /bed/ cái giường
 bedroom:	n. /'bedrum/ phòng ngủ
@@ -473,10 +462,6 @@ celebrate:	v. /'selibreit/ kỷ niệm, làm lễ kỷ niệm; tán dương, ca 
 celebration:	n. /,seli'breiʃn/  sự kỷ niệm, lễ kỷ niệm; sự tán dương, sự ca tụng
 cell:	n. /sel/ ô, ngăn
 cellphone:	(also cellular phone) n. (especially NAmE) điện thoại di động
-cent:	đồng xu (bằng 1/100 đô la)
-cent:	n. (abbr. c, ct) /sent/ đồng xu (
-centimetre:	(BrE) (NAmE centimeter) n. (abbr. cm)  xen ti met
-centimetre:	/'senti,mi:tз/ xen ti mét
 central:	adj. /´sentrəl/ trung tâm, ở giữa, trung ương
 centre:	(BrE) (NAmE center) n. /'sentə/ điểm giữa, trung tâm, trung ương
 century:	n. /'sentʃuri/ thế kỷ
@@ -548,8 +533,6 @@ climate:	n. /'klaimit/  khí hậu, thời tiết
 climb:	v. /klaim/ leo, trèo
 climbing:	n. /´klaimiη/ sự leo trèo
 clock:	n. /klɔk/ đồng hồ
-close:	NAmE adj. /klouz/ đóng kín, chật chội, che đậy
-close:	NAmE v. đóng, khép, kết thúc, chấm dứt
 closed:	adj. /klouzd/ bảo thủ, không cởi mở, khép kín
 closely:	adv. /´klousli/ chặt chẽ, kỹ lưỡng, tỉ mỉ
 closet:	n. (especially NAmE) /'klozit/  buồng, phòng để đồ, phòng kho
@@ -942,8 +925,6 @@ drugstore:	n. (NAmE) /'drʌgstɔ:/ hiệu thuốc, cửa hàng dược phẩm
 drum:	n. /drʌm/ cái trống, tiếng trống
 drunk:	adj. /drʌŋk/ say rượu
 dry:	adj., v. /drai/  khô, cạn; làm khô, sấy khô
-due:	adj. /du, dyu/ đến kỳ hạn (trả nợ); xứng đáng, thích đáng
-due:	to  vì, do, tại, nhờ có
 dull:	adj. /dʌl/ chậm hiểu, ngu đần
 dump:	v., n. /dʌmp/ đổ rác; đống rác, nơi đổ rác
 during:	prep. /'djuəriɳ/ trong lúc, trong thời gian
@@ -952,8 +933,6 @@ duty:	n. /'dju:ti/  sự tôn kính, kính trọng; bồn phận, trách nhiệm
 dying:	adj. /ˈdaɪɪŋ/ sự chết
 e.g. abbr:	. Viết tắt của cụm từ La tinh exempli gratia (for example)
 each:	det., pron. /i:tʃ/ mỗi
-each other:	(also one another) pron. nhau, lẫn nhau
-each other:	nhau, lẫn nhau
 ear:	n. /iə/ tai
 early:	adj., adv. /´ə:li/ sớm
 earn:	v. /ə:n/  kiếm (tiền), giành (phần thưởng)
@@ -1250,16 +1229,12 @@ former:	adj. /´fɔ:mə/ trước, cũ, xưa, nguyên
 formerly:	adv. /´fɔ:məli/ trước đây, thuở xưa
 formula:	n. /'fɔ:mjulə/ công thức, thể thức, cách thức
 fortune:	n. /ˈfɔrtʃən/  sự giàu có, sự thịnh vượng
-forward:	(also forwards) adv. /ˈfɔrwərd/ về tương lai, sau này ở phía trước, tiến về phía trước
-forward:	adj.  /ˈfɔrwərd/ ở phía trước, tiến về phía trước
 found:	v. /faund/ (q.k of find) tìm, tìm thấy
 foundation:	n. /faun'dei∫n/ sự thành lập, sự sáng lập; tổ chức
 frame:	n., v. /freim/ cấu trúc, hệ thống; dàn xếp, bố trí
 free:	adj., v., adv. /fri:/ miễn phí, tự do, giải phóng, trả tự do
 freedom:	n. /'fri:dəm/ sự tự do; nền tự do
 freely:	adv. /´fri:li/ tự do, thoải mái
-freeze:	v. /fri:z/ đóng băng, đông lạnh
-freeze:	n., v.  /fri:z/ sự đông lạnh, sự giá lạnh; làm đông, làm đóng băng
 frequent:	adj. /ˈfrikwənt/ thường xuyên
 frequently:	adv. /´fri:kwəntli/ thường xuyên
 fresh:	adj. /freʃ/  tươi, tươi tắn
@@ -1287,8 +1262,6 @@ funeral:	n. /ˈfju:nərəl/  lễ tang, đám  tang
 funny:	adj. /´fʌni/ buồn cười, khôi hài
 fur:	n. /fə:/ bộ da lông thú
 furniture:	n. /'fə:nitʃə/ đồ đạc (trong nhà)
-further:	adj. /'fə:ðə/ xa hơn nữa; thêm nữa
-further:	, furthest cấp so sánh của far
 future:	n., adj. /'fju:tʃə/  tương lai
 gain:	v., n. /geɪn/ lợi, lợi ích; giành được, kiếm được, đạt tới
 gallon:	n. /'gælən/ Galông 1gl
@@ -1323,10 +1296,6 @@ giant:	n., adj. /ˈdʒaiənt/  người khổng lồ, người phi thường; kh
 gift:	n. /gift/ quà tặng
 girl:	n. /g3:l/ con gái
 girlfriend:	n. /'gз:lfrend/ bạn gái, người yêu
-give:	v. /giv/  cho, biếu, tặng
-give:	sth away cho, phát
-give:	sth out chia, phân phối
-give:	(sth) up bỏ, từ bỏ
 give birth:	(to)  sinh ra
 glad:	adj. /glæd/ vui lòng, sung sướng
 glass:	n. /glɑ:s/  kính, thủy tinh, cái cốc, ly
@@ -1356,8 +1325,6 @@ grade:	n., v. /greɪd/ điểm, điểm số; phân loại, xếp loại
 gradual:	adj. /´grædjuəl/ dần dần, từng bước một
 gradually:	adv. /'grædzuәli/ dần dần, từ từ
 grain:	n. /grein/ thóc lúa, hạt, hột; tính chất, bản chất
-gram:	n. /'græm/ đậu xanh
-gram:	(BrE also gramme) n. (abbr. g, gm) /'græm/ ngữ pháp
 grammar:	n. /ˈgræmər/  văn phạm
 grand:	adj. /grænd/ rộng lớn, vĩ đại
 grandchild:	n. /´græn¸tʃaild/ cháu (của ông bà)
@@ -1374,8 +1341,6 @@ gray(NAmE):	/grei/ xám, hoa râm (tóc)
 great:	adj. /greɪt/ to, lớn, vĩ đại
 greatly:	adv. /´greitli/ rất, lắm; cao thượng, cao cả
 green:	adj., n. /grin/ xanh lá cây
-grey:	/grei/ xám, hoa râm (tóc)
-grey:	(BrE) (NAmE usually gray) adj., n.
 groceries:	n. /ˈgroʊsəri, ˈgroʊsri/ hàng tạp hóa
 grocery:	(NAmE usually grocery store) n. /´grousəri/ cửa hàng tạp phẩm
 ground:	n. /graund/ mặt đất, đất,  bãi đất
@@ -1482,6 +1447,8 @@ house:	n. /haus/  nhà, căn nhà, toàn nhà
 household:	n., adj. /´haushould/ hộ, gia đình; (thuộc) gia đình
 housing:	n. /´hauziη/ nơi ăn chốn ở
 how:	adv. /hau/ thế nào, như thế nào, làm sao, ra sao
+how are you:	bạn có khỏe không
+how old are you:	bạn bao nhiêu tuổi
 however:	adv. /hau´evə/ tuy nhiên, tuy vậy, dù thế nào
 huge:	adj. /hjuːdʒ/ to lớn, khổng lồ
 human:	adj., n. /'hju:mən/  (thuộc) con người, loài người
@@ -1598,8 +1565,6 @@ inside:	prep., adv., n., adj. /'in'said/ mặt trong, phía, phần trong; ở t
 insist:	(on) v. /in'sist/ cứ nhất định, cứ khăng khăng
 install:	v. /in'stɔ:l/  đặt (hệ thống máy móc, thiết bị...)
 instance:	n. /'instəns/ thí dị, ví dụ; trường hợp cá biệt
-instead:	adv. /in'sted/ để thay thế
-instead:	of thay cho
 institute:	n. /ˈ´institju:t/ viện, học viện
 institution:	n. /UK ,insti'tju:ʃn ; US ,insti'tu:ʃn/  sự thành lập, lập; cơ quan, trụ sở
 instruction:	n. /ɪn'strʌkʃn/ sự dạy, tài liệu cung cấp
@@ -1686,8 +1651,6 @@ kid:	n. /kid/  con dê non
 kill:	v. /kil/ giết, tiêu diệt
 killing:	n. /´kiliη/ sự giết chóc, sự tàn sát
 kilogram:	(BrE also kilogramme) (also kilo) n. (abbr. kg) /´kilou¸græm/ Kilôgam
-kilometre:	(BrE) (NAmE kilometer) n. (abbr. k, km) /´kilə¸mi:tə/ Kilômet
-kilometre:	n. /´kilə¸mi:tə/ Kilômet
 kind:	n., adj. /kaind/ loại, giống; tử tế, có lòng tốt
 kindly:	adv. /´kaindli/ tử tế, tốt bụng
 kindness:	n. /'kaindnis/  sự tử tế, lòng tốt
@@ -1773,11 +1736,7 @@ liquid:	n., adj. /'likwid/  chất lỏng; lỏng, êm ái, du dương, không v
 list:	n., v. /list/ danh sách; ghi vào danh sách
 listen:	(to) v. /'lisn/ nghe, lắng nghe
 literature:	n. /ˈlɪtərətʃər/ văn chương, văn học
-litre:	n. /´li:tə/ lít
-litre:	(BrE) (NAmE liter) n. (abbr. l) /´li:tə/ lít
 little:	adj., det., pron., adv. /'lit(ә)l/ nhỏ, bé, chút ít; không nhiều; một chút
-live:	adj., adv. /liv/ sống, hoạt động
-live:	v. /liv/ sống
 lively:	adj. /'laivli/ sống, sinh động
 living:	adj. /'liviŋ/ sống, đang sống
 load:	n., v. /loud/ gánh nặng, vật nặng; chất, chở
@@ -1792,8 +1751,6 @@ logic:	n. /'lɔdʤik/  lô gic
 logical:	adj. /'lɔdʤikəl/ hợp lý, hợp logic
 lonely:	adj. /´lounli/ cô đơn, bơ vơ
 long:	adj., adv. /lɔɳ/ dài, xa; lâu
-look:	v., n. /luk/ nhìn; cái nhìn
-look:	after (especially BrE) trông nom, chăm sóc
 look at:	nhìn, ngắm, xem
 look for:	tìm kiếm
 look forward to:	mong đợi cách hân hoan
@@ -1847,8 +1804,6 @@ manufacturer:	n. /¸mæni´fæktʃərə/ người chế tạo, người sản xu
 manufacturing:	n. /¸mænju´fæktʃəriη/ sự sản xuất, sự chế tạo
 many:	det., pron. /'meni/ nhiều
 map:	n. /mæp/  bản đồ
-march:	n. (abbr. Mar.) /mɑ:tʃ/ tháng ba
-march:	v., n. diễu hành, hành quân; cuộc hành quân, cuộc diễu hành
 mark:	n., v. /mɑ:k/ dấu, nhãn, nhãn mác; đánh dấu, ghi dấu
 market:	n. /'mɑ:kit/  chợ, thị trường
 marketing:	n. /'mα:kitiη/ ma-kết-tinh
@@ -1920,8 +1875,6 @@ minor:	adj. /´mainə/ nhỏ hơn, thứ yếu, không quan trọng
 minority:	n. /mai´nɔriti/ phần ít, thiểu số
 minute:	n. /'minit/ phút
 mirror:	n. /ˈmɪrər/ gương
-miss:	n. /mis/ cô gái, thiếu nữ
-miss:	v., n. /mis/ lỡ, trượt; sự trượt, sự thiếu vắng
 missing:	adj. /´misiη/ vắng, thiếu, thất lạc
 mistake:	n., v. /mis'teik/ lỗi, sai lầm, lỗi lầm; phạm lỗi, phạm sai lầm
 mistaken:	adj. /mis´teiken/ sai lầm, hiểu lầm
@@ -1965,8 +1918,6 @@ ms:	(BrE) (also Ms. NAmE, BrE) abbr.
 much:	det., pron., adv. /mʌtʃ/ nhiều, lắm
 mud:	n. /mʌd/  bùn
 multiply:	v. /'mʌltiplai/ nhân lên, làm tăng lên nhiều lần; sinh sôi nảy nở
-mum:	n. /mʌm/ mẹ
-mum:	(BrE) (NAmE mom) n. /mʌm/ mẹ
 murder:	n., v. /'mə:də/ tội giết người, tội ám sát; giết người, ám sát
 muscle:	n. /'mʌsl/  cơ, bắp thịt
 museum:	n. /mju:´ziəm/ bảo tàng
@@ -2188,8 +2139,6 @@ peak:	n. /pi:k/ lưỡi trai; đỉnh, chóp
 pen:	n. /pen/ bút
 pence:	n. /pens/ đồng xu
 pencil:	n. /´pensil/ bút chì
-penny:	/´peni/ đồng xu
-penny:	n. (abbr. p) /´peni/ số tiền
 pension:	n. /'penʃn/ tiền trợ cấp, lương hưu
 people:	n. /ˈpipəl/ dân tộc, dòng giống; người
 pepper:	n. /´pepə/ hạt tiêu, cây ớt
@@ -2224,8 +2173,6 @@ physical:	adj. /´fizikl/ vật chất; (thuộc) cơ thể, thân thể
 physically:	adv. /´fizikli/ về thân thể, theo luật tự nhiên
 physics:	n. /'fiziks/ vật lý học
 piano:	n. /'pjænou/ đàn pianô, dương cầm
-pick:	v. /pik/ cuốc (đất); đào, khoét (lỗ)
-pick:	sth up cuốc, vỡ, xé
 picture:	n. /'piktʃə/ bức vẽ, bức họa
 piece:	n. /pi:s/  mảnh, mẩu; đồng tiền
 pig:	n. /pig/  con lợn
@@ -2234,8 +2181,6 @@ pill:	n. /´pil/ viên thuốc
 pilot:	n. /´paiələt/ phi công
 pin:	n., v. /pin/ đinh ghim; ghim., kẹp
 pink:	adj., n. /piηk/ màu hồng; hoa cẩm chướng, tình trạng tốt, hoàn hảo
-pint:	n. (abbr. pt) /paint/ Panh (đơn vị (đo lường) ở Anh bằng 0, 58 lít; ở Mỹ bằng 0, 473 lít); panh,
-pint:	n. /paint/ panh (
 pipe:	n. /paip/ ống dẫn (khí, nước...)
 pitch:	n. /pit∫/ sân (chơi các môn thể thao); đầu hắc ín
 pity:	n. /´piti/ lòng thương hại,  điều đáng tiếc, đáng thương
@@ -2684,8 +2629,6 @@ seek:	v. /si:k/ tìm, tìm kiếm, theo đuổi
 seem linking:	v. /si:m/ có vẻ như, dường như
 select:	v. /si´lekt/ chọn lựa, chọn lọc
 selection:	n. /si'lekʃn/ sự lựa chọn, sự chọc lọc
-self:	n. /self/ bản thân mình
-self:	- combining form
 sell:	v. /sel/ bán
 senate:	n. /´senit/ thượng nghi viện, ban giám hiệu
 senator:	n. /ˈsɛnətər/ thượng nghị sĩ
@@ -3184,8 +3127,6 @@ transform:	v. /træns'fɔ:m/ thay đổi, biến đổi
 translate:	v. /træns´leit/ dịch, biên dịch, phiên dịch
 translation:	n. /træns'leiʃn/ sự dịch
 transparent:	adj. /træns´pærənt/ trong suốt; dễ hiểu, sáng sủa
-transport:	n. (BrE) (NAmE transportation) /'trænspɔ:t/ sự vận chuyển, sự vận tải; phương tiện đi lại
-transport:	v. (BrE, NAmE) chuyên chở, vận tải
 trap:	n., v. /træp/ đồ đạc, hành lý; bẫy, cạm bãy; bẫy, giữ, chặn lại
 travel:	v., n. /'trævl/ đi lại, đi du lịch, di chuyển; sự đi, những chuyến đi
 traveller:	(BrE) (NAmE traveler) n. /'trævlə/ người đi, lữ khách
@@ -3242,24 +3183,10 @@ understand:	v. /ʌndə'stænd/ hiểu, nhận thức
 understanding:	n. /ˌʌndərˈstændɪŋ/ trí tuệ, sự hiểu biết
 underwater:	adj., adv. /´ʌndə¸wɔtə/ ở dưới mặt nước, dưới mặt nước
 underwear:	n. /'ʌndəweə/ quần lót
-undo:	v. /ʌn´du:/ tháo, gỡ; xóa bỏ, hủy bỏ
-undo:	do /ʌn´du:/ tháo, gỡ, xóa, hủy bỏ
-unemployed:	adj. /¸ʌnim´plɔid/ thất nghiệp; không dùng, không sử dụng được
-unemployed:	employ /¸ʌnim´plɔid/ không dùng, thất nghiệp
-unemployment:	n. /'Δnim'ploimзnt/ sự thất nghiệp, nạn thất nghiệp
-unemployment:	employment /'Δnim'ploimзnt/ sự thất nghiệp, tình trạng thất nghiệp
-unexpected:	adj. /¸ʌniks´pektid/ bất ngờ, gây ngạc nhiên
-unexpected:	, unexpectedly expect /¸ʌniks´pektid/ bất ngờ, đột ngột, gây ngạc nhiên
 unexpectedly:	adv. /'Δniks'pektid/ bất ngờ, gây ngạc nhiên
-unfair:	adj. /ʌn´fɛə/ gian lận, không công bằng; bất lợi
-unfair:	, unfairly fair /ʌn´fɛə/ không đúng, không công bằng, gian lận
 unfairly:	adv. /ʌn´fɛəli/ gian lận, không công bằng; bất lợi
 unfortunate:	adj. /Λnfo:'t∫әneit/ không may, rủi ro, bất hạnh
 unfortunately:	adv. /ʌn´fɔ:tʃənətli/ một cách đáng tiếc, một cách không may
-unfriendly:	adj. /ʌn´frendli/ không thân thiện, không có thiện cảm
-unfriendly:	friendly /ʌn´frendli/ đối địch, không thân thiện
-unhappiness:	n. /ʌn´hæpinis/ nỗi buồn, sự bất hạnh
-unhappiness:	happiness /ʌn´hæpinis/ sự buồn, nỗi buồn
 unhappy:	adj. /ʌn´hæpi/ buồn rầu, khốn khổ
 unhappy happy:	/ʌn´hæpi/ buồn rầu, khổ sở
 uniform:	n., adj. /ˈjunəˌfɔrm/ đồng phục; đều, giống nhau, đồng dạng
@@ -3318,8 +3245,6 @@ urge:	v., n. /ə:dʒ/ thúc, giục, giục giã; sự thúc đẩy, sự thôi 
 urgent:	adj. /ˈɜrdʒənt/ gấp, khẩn cấp
 us:	pron. /ʌs/ chúng tôi, chúng ta; tôi và anh
 use:	v., n. /ju:s/ sử dụng, dùng; sự dùng, sự sử dụng
-used:	adj. /ju:st/ đã dùng, đã sử dụng
-used:	to sth/to doing sth sử dụng cái gì, sử dụng để làm cái gì
 used to modal:	v. đã quen dùng
 useful:	adj. /´ju:sful/ hữu ích, giúp ích
 useless:	adj. /'ju:slis/ vô ích, vô dụng
@@ -3405,8 +3330,6 @@ weigh:	v. /wei/ cân, cân nặng
 weight:	n. /'weit/ trọng lượng
 welcome:	v., adj., n., exclamation /'welkʌm/ chào mừng, hoan nghênh
 well:	adv., adj., exclamation /wel/ tốt, giỏi; ôi, may quá!
-well known:	adj. /´wel´noun/ nổi tiếng, được nhiều người biết đến
-well known:	know
 west:	n., adj., adv. /west/ phía Tây, theo phía tây, về hướng tây
 western:	adj. /'westn/ về phía tây, của phía tây
 wet:	adj. /wɛt/ ướt, ẩm ướt
@@ -3442,8 +3365,6 @@ willing:	adj. /´wiliη/ bằng lòng, vui lòng, muốn
 willingly:	adv. /'wiliηli/ sẵn lòng, tự nguyện
 willingness:	n. /´wiliηnis/ sự bằng lòng, sự vui lòng
 win:	v. /win/ chiếm, đọat, thu được
-wind:	v. /wind/ quấn lại, cuộn lại
-wind:	sth up lên dây, quấn, giải quyết
 wind:	n. /wind/ gió
 window:	n. /'windəʊ/ cửa sổ
 wine:	n. /wain/ rượu, đồ uống

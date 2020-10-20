@@ -34,7 +34,7 @@ public class DictionaryCommandLine {
         // call dictionaryLookup
         System.out.print("Enter the word you want to search: ");
         String wordTargetFind = DictionaryManagement.sc.nextLine();
-        int index = DictionaryManagement.dictionaryLookup(wordTargetFind);
+        int index = 0;
         if (index != -1) {
             System.out.println(Dictionary.words.get(index).getInfo());
         }
@@ -51,16 +51,11 @@ public class DictionaryCommandLine {
         
         // add các từ tìm được phù hợp vào mảng mới.
         for (Word word : Dictionary.words) {
-            if(word.getWordTarget().toLowerCase().indexOf(wordTargetFind.toLowerCase()) != -1) {
+            if(word.getWordTarget().toLowerCase().startsWith(wordTargetFind.toLowerCase())) {
                 Word wordFind = new Word(word);
                 wordFindArr.add(wordFind);
             }
         }
-        return wordFindArr;
-    }
-
-    public static List<Word> searcher(String wordFind) {
-        List<Word> wordFindArr = new ArrayList<Word>();
         return wordFindArr;
     }
 }

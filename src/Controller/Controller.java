@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.AVLNode;
 import Model.Dictionary;
 import Model.Word;
 import View.DictionaryApplication;
@@ -49,7 +50,6 @@ public class Controller implements Initializable {
     private String[] textExplain = new String[3];
 
     ObservableList<String> listWordTarget = FXCollections.observableArrayList();
-    ObservableList<String> listWordExplain = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -58,34 +58,36 @@ public class Controller implements Initializable {
         Speak.setDisable(true);
         WordExplain.setEditable(false);
 
-        // add listener cho thanh search
+        // cập nhật các từ tìm kiếm mỗi khi nhập, xóa các kí tự
         try {
             Search.textProperty().addListener((observable, oldValue, newValue) -> {
-                wordsFind = DictionaryCommandLine.dictionarySearcher(newValue.trim());
+                wordsFind = SearchAVL.dictionarySearcher(newValue.trim());
                 loadData();
             });
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
-        Speak.setOnMouseClicked(event -> {
-            textToSpeech(textSpeech);
-        });
+        // click vào thì nói
+        Speak.setOnMouseClicked(event -> textToSpeech(textSpeech));
 
-        // Them cach hien thi khi click vao cac Wordtarget
+        // Chế độ chỉ được chọn 1 trong list word target
         WordTarget.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         try {
             WordTarget.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
                 Speak.setDisable(false);
                 editButton.setDisable(false);
-                String s = listWordExplain.get(listWordTarget.indexOf(newValue));
-                if (!newValue.equals("NOT FOUND!")) {
+                AVLNode nodeSearch = Dictionary.wordTree.search(new Word(newValue, ""));
+                // EDIT cách hiển thị cho wordExplain
+                if (!newValue.equals("NOT FOUND!")
+                        && nodeSearch != null) {
+                    String s = nodeSearch.getWord().getWordExplain();
                     if (s.lastIndexOf(".") > -1) {
                         textExplain[0] = s.substring(0, s.lastIndexOf(".") + 1);
                     } else {
                         textExplain[0] = "UNKNOWN";
                     }
-                    if (s.indexOf("/") > - 1 && s.lastIndexOf("/") > -1) {
+                    if (s.contains("/") && s.lastIndexOf("/") > -1) {
                         textExplain[1] = s.substring(s.indexOf("/"), s.lastIndexOf("/") + 1);
                         textExplain[2] = s.substring(s.lastIndexOf("/") + 1);
                     } else {
@@ -94,11 +96,11 @@ public class Controller implements Initializable {
                     }
                     WordExplain.setText(newValue + ":\n" + textExplain[1] + "\n"
                             + "( " + textExplain[0] + ") " + textExplain[2]);
+                    wordEdit = new Word(newValue, s);
                 } else {
                     WordExplain.setText(newValue);
                 }
                 textSpeech = newValue;
-                wordEdit = new Word(newValue, s);
 
             });
         } catch (Exception e) {
@@ -107,13 +109,13 @@ public class Controller implements Initializable {
         loadData();
     }
 
+    // Cập nhật lại dữ liệu của list
+    @FXML
     private void loadData() {
         WordTarget.getItems().clear();
         listWordTarget.removeAll(listWordTarget);
-        listWordExplain.removeAll(listWordExplain);
         for (Word word : wordsFind) {
             listWordTarget.add(word.getWordTarget());
-            listWordExplain.add(word.getWordExplain());
         }
         if (wordsFind.size() == 0) {
             listWordTarget.add("NOT FOUND!");
@@ -128,16 +130,25 @@ public class Controller implements Initializable {
 
         result.ifPresent(word -> {
             editWord(wordEdit.getWordTarget(), word.getKey(), word.getValue());
+            loadData();
+            WordTarget.getSelectionModel().select(word.getKey());
         });
-        wordsFind = DictionaryCommandLine.dictionarySearcher(Search.getText().trim());
-        loadData();
     }
 
     public void clickAdd(ActionEvent event) {
         DictionaryApplication.createDialogAdd();
         Optional<Pair<String, String>> result = DictionaryApplication.dialogAdd.showAndWait();
 
-        result.ifPresent(word -> addWord(word.getKey(), word.getValue()));
+        result.ifPresent(word -> {
+            boolean isAdd = addWord(word.getKey(), word.getValue());
+            if (!isAdd) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText("Không thể thêm từ");
+                alert.setContentText("Từ thêm vào bị trùng lặp");
+                alert.setTitle("Not Adding");
+                alert.show();
+            }
+        });
         wordsFind = DictionaryCommandLine.dictionarySearcher(Search.getText().trim());
         loadData();
     }
@@ -155,8 +166,8 @@ public class Controller implements Initializable {
             boolean isRemove = removeWord(word.getKey());
             if (!isRemove) {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setHeaderText("NOT FOUND WORD!!!");
-                alert.setContentText("Not found word");
+                alert.setHeaderText("Không tìm thấy từ cần xóa");
+                alert.setContentText("Không có từ để xóa");
                 alert.setTitle("Not Remove");
                 alert.show();
             }

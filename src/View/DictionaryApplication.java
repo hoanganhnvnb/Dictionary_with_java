@@ -1,6 +1,5 @@
 package View;
 
-import Model.Dictionary;
 import Model.DictionaryManagement;
 import Model.Word;
 import javafx.application.Application;

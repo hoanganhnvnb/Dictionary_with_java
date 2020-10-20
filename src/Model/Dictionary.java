@@ -5,4 +5,5 @@ import java.util.List;
 
 public class Dictionary {
     public static List<Word> words = new ArrayList<Word>();
+    public static AVLTree wordTree = new AVLTree();
 }

@@ -16,7 +16,7 @@
             <HBox prefHeight="36.0" prefWidth="276.0">
                <children>
                   <Button fx:id="ButtonAdd" mnemonicParsing="false" onAction="#clickAdd" prefHeight="26.0" prefWidth="70.0" text="Add" />
-                  <Button mnemonicParsing="false" onAction="#clickRemove" prefHeight="26.0" prefWidth="60.0" text="Remove" />
+                  <Button mnemonicParsing="false" onAction="#clickRemove" prefHeight="26.0" prefWidth="82.0" text="Remove" />
                </children>
             </HBox>
             <HBox prefHeight="40.0" prefWidth="255.0">
@@ -28,7 +28,7 @@
       </VBox>
       <HBox layoutX="-7.0" layoutY="116.0" prefHeight="498.0" prefWidth="662.0">
          <children>
-            <ListView fx:id="WordTarget" prefHeight="498.0" prefWidth="282.0" style="-fx-border-color: blue;" styleClass="listTarget" />
+            <ListView fx:id="WordTarget" onEditStart="#loadData" prefHeight="498.0" prefWidth="282.0" style="-fx-border-color: blue;" styleClass="listTarget" />
             <VBox prefHeight="498.0" prefWidth="387.0" style="-fx-background-color: #ffffff; -fx-border-color: blue;">
                <children>
                   <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="382.0">
