@@ -135,9 +135,9 @@ public class AVLTree {
     }
 
     public boolean add(Word word) {
-        int oldSize = this.size;
-        this.root = add(this.root, word);
-        if (this.size > oldSize) {
+        AVLNode node = Dictionary.wordTree.search(word);
+        if (node == null) {
+            this.root = add(this.root, word);
             return true;
         }
         return false;
