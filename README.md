@@ -1,2 +1,2 @@
 # Dictionary_with_java
-A simple Dictionary
+A simple Dictionary (not use database)
